@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--JavaScript Data Types
+    
+        JavaScript has 8 Datatypes
+            String
+            Number
+            Bigint
+            Boolean
+            Undefined
+            Null
+            Symbol
+            Object
+
+        The Object Datatype
+        The object data type can contain both built-in objects, and user defined objects:
+
+        Built-in object types can be:
+
+        objects, arrays, dates, maps, sets, intarrays, floatarrays, promises, and more.
+
+        Examples
+        // Numbers:
+        let length = 16;
+        let weight = 7.5;
+
+        // Strings:
+        let color = "Yellow";
+        let lastName = "Johnson";
+
+        // Booleans
+        let x = true;
+        let y = false;
+
+        // Object:
+        const person = {firstName:"John", lastName:"Doe"};
+
+        // Array object:
+        const cars = ["Saab", "Volvo", "BMW"];
+
+        // Date object:
+        const date = new Date("2022-03-25");
+        Note
+        A JavaScript variable can hold any type of data.
+    -->
+
+    <!--The Concept of Data Types
+        In programming, data types is an important concept.
+
+        To be able to operate on variables, it is important to know something about the type.
+
+        Without data types, a computer cannot safely solve this:
+
+        let x = 16 + "Volvo";
+        Does it make any sense to add "Volvo" to sixteen? Will it produce an error or will it produce a result?
+
+        JavaScript will treat the example above as:
+
+        let x = "16" + "Volvo";
+        Note
+        When adding a number and a string, JavaScript will treat the number as a string.
+    -->
+    <h2>JavaScript</h2>
+
+    <p>When adding a number and a string, JavaScript will treat the number as a string.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let x = 16 + "Volvo";
+    document.getElementById("demo").innerHTML = x;
+    </script>
+    
+    <hr>
+
+    <h2>JavaScript</h2>
+
+    <p>When adding a string and a number, JavaScript will treat the number as a string.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let x = "Volvo" + 16;
+    document.getElementById("demo").innerHTML = x;
+    </script>
+    
+    <hr>
+
+
+    <!--JavaScript evaluates expressions from left to right. Different sequences can produce different results:-->
+    <h2>JavaScript</h2>
+
+    <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let x = 16 + 4 + "Volvo";
+    document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <hr>
+
+    <h2>JavaScript</h2>
+
+    <p>JavaScript evaluates expressions from left to right. Different sequences can produce different results:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let x = "Volvo" + 16 + 4;
+    document.getElementById("demo").innerHTML = x;
+    </script>
+
+
+    <!--In the first example, JavaScript treats 16 and 4 as numbers, until it reaches "Volvo".
+
+        In the second example, since the first operand is a string, all operands are treated as strings.
+    -->
+
+    <!--JavaScript Types are Dynamic
+        JavaScript has dynamic types. This means that the same variable can be used to hold different data types:
+    -->
+    <h2>JavaScript Data Types</h2>
+
+    <p>JavaScript has dynamic types. This means that the same variable can be used to hold different data types:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let x;         // Now x is undefined
+    x = 5;         // Now x is a Number
+    x = "John";    // Now x is a String
+    
+    document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <hr>
+
+    <!--JavaScript Strings
+        A string (or a text string) is a series of characters like "John Doe".
+
+        Strings are written with quotes. You can use single or double quotes:
+    -->
+    <h2>JavaScript Strings</h2>
+
+    <p>Strings are written with quotes. You can use single or double quotes:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let carName1 = "Volvo XC60";
+    let carName2 = 'Volvo XC60';
+    
+    document.getElementById("demo").innerHTML =
+    carName1 + "<br>" + 
+    carName2; 
+    </script>
+
+    <hr>
+
+    <!--You can use quotes inside a string, as long as they don't match the quotes 
+        surrounding the string:
+    -->
+    <h2>JavaScript Strings</h2>
+
+    <p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let answer1 = "It's alright";
+    let answer2 = "He is called 'Johnny'";
+    let answer3 = 'He is called "Johnny"';
+    
+    document.getElementById("demo").innerHTML =
+    answer1 + "<br>" + 
+    answer2 + "<br>" + 
+    answer3;
+    </script>
+
+    <hr>
+
+    <!--JavaScript Numbers
+        All JavaScript numbers are stored as decimal numbers (floating point).
+
+        Numbers can be written with, or without decimals:
+    -->
+    <h2>JavaScript Numbers</h2>
+
+    <p>Numbers can be written with, or without decimals:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let x1 = 34.00;
+    let x2 = 34;
+    let x3 = 3.14;
+    
+    document.getElementById("demo").innerHTML =
+    x1 + "<br>" + x2 + "<br>" + x3;
+    </script>
+
+    <hr>
+
+    <!--Exponential Notation
+        Extra large or extra small numbers can be written with scientific 
+        (exponential) notation: 
+    -->
+
+    <h2>JavaScript Numbers</h2>
+
+    <p>Extra large or extra small numbers can be written with scientific (exponential) notation:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let y = 123e5;
+    let z = 123e-5;
+    
+    document.getElementById("demo").innerHTML =
+    y + "<br>" + z;
+    </script>
+
+    <hr>
+
+    <!--Note
+        Most programming languages have many number types:
+
+        Whole numbers (integers):
+        byte (8-bit), short (16-bit), int (32-bit), long (64-bit)
+
+        Real numbers (floating-point):
+        float (32-bit), double (64-bit).
+
+        Javascript numbers are always one type:
+        double (64-bit floating point).
+    -->
+
+    <!--JavaScript BigInt
+        All JavaScript numbers are stored in a 64-bit floating-point format.
+
+        JavaScript BigInt is a new datatype (ES2020) that can be used to store integer values that are too big to be represented by a normal JavaScript Number.
+    -->
+    <h1>JavScript Bigint</h1>
+    <p>A BigInt can not have decimals.</p>
+    
+    <p id="demo"></p>
+    
+    <p>You cannot perform math between a BigInt type and a Number type.</p>
+    
+    <script>
+    let x = BigInt("123456789012345678901234567890");
+    document.getElementById("demo").innerHTML = x; 
+    </script>
+
+    <hr>
+
+    <!--JavaScript Booleans
+        Booleans can only have two values: true or false.
+    -->
+    <h2>JavaScript Booleans</h2>
+
+    <p>Booleans can have two values: true or false:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let x = 5;
+    let y = 5;
+    let z = 6;
+    
+    document.getElementById("demo").innerHTML =
+    (x == y) + "<br>" + (x == z);
+    </script>
+    
+    <!--Booleans are often used in conditional testing-->
+
+    <hr>
+
+    <!--JavaScript Arrays
+        JavaScript arrays are written with square brackets.
+
+        Array items are separated by commas.
+
+        The following code declares (creates) an array called cars, 
+        containing three items (car names):
+    -->
+    <h2>JavaScript Arrays</h2>
+
+    <p>Array indexes are zero-based, which means the first item is [0].</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    const cars = ["Saab","Volvo","BMW"];
+    
+    document.getElementById("demo").innerHTML = cars[0];
+    </script>
+
+    <hr>
+
+    <!--Array indexes are zero-based, which means the first item is [0], second is 
+        [1], and so on.
+    -->
+
+    <!--JavaScript Objects
+        JavaScript objects are written with curly braces {}.
+
+        Object properties are written as name:value pairs, separated by commas.
+    -->
+    <h2>JavaScript Objects</h2>
+
+    <p id="demo"></p>
+    
+    <script>
+    const person = {
+      firstName : "John",
+      lastName  : "Doe",
+      age     : 50,
+      eyeColor  : "blue"
+    };
+    
+    document.getElementById("demo").innerHTML =
+    person.firstName + " is " + person.age + " years old.";
+    </script>
+
+    <hr>
+
+    <!--The object (person) in the example above has 4 properties: firstName, 
+        lastName, age, and eyeColor.
+    -->
+
+    <!--The typeof Operator
+        You can use the JavaScript typeof operator to find the type of a JavaScript variable.
+
+        The typeof operator returns the type of a variable or an expression:
+    -->
+
+    <h1>JavaScript Operators</h1>
+    <h2>The typeof Operator</h2>
+    <p>The typeof operator returns the type of a variable or an expression.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    document.getElementById("demo").innerHTML = 
+    typeof "" + "<br>" +
+    typeof "John" + "<br>" + 
+    typeof "John Doe";
+    </script>
+
+    <hr>
+
+    <h1>JavaScript Operators</h1>
+    <h2>The typeof Operator</h2>
+    <p>The typeof operator returns the type of a variable or an expression.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    document.getElementById("demo").innerHTML = 
+    typeof 0 + "<br>" + 
+    typeof 314 + "<br>" +
+    typeof 3.14 + "<br>" +
+    typeof (3) + "<br>" +
+    typeof (3 + 4);
+    </script>
+
+    <hr>
+
+    <!--Undefined
+        In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+    -->
+    <h1>JavaScript Operators</h1>
+    <h2>The typeof Operator</h2>
+    <p>The value (and the data type) of a variable with no value is <b>undefined</b>.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let car;
+    document.getElementById("demo").innerHTML =
+    car + "<br>" + typeof car;
+    </script>
+
+    <hr>
+
+    <!--Any variable can be emptied, by setting the value to undefined. The type 
+        will also be undefined.
+    -->
+    <h1>JavaScript Operators</h1>
+    <h2>The typeof Operator</h2>
+    <p>Variables can be emptied if you set the value to <b>undefined</b>.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let car = "Volvo";
+    car = undefined;
+    
+    document.getElementById("demo").innerHTML =
+    "<p>The value of car is " + car +
+    "<p>The typeof car is " + typeof car;
+    </script>
+
+    <hr>
+
+    <!--Empty Values
+        An empty value has nothing to do with undefined.
+
+        An empty string has both a legal value and a type.
+    -->
+    <h1>JavaScript Datatypes</h1>
+
+    <p>An empty string has both a legal value and a type:</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    let car = "";
+    
+    document.getElementById("demo").innerHTML =
+    "The value is: " + car + "<br>" + "The type is: " + typeof car;
+    </script>
+
+    <hr>
+
+    
+</body>
+</html>
